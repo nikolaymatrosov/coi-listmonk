@@ -5,7 +5,7 @@ x-db-credentials: &db-credentials                             # Use the default 
 
 x-admin-credentials: &admin-credentials
   LISTMONK_ADMIN_USER: &admin-user listmonk-admin
-  LISTMONK_ADMIN_PASSWORD: &admin-password Y-D!uj!01Ah_qBb.u(dvF#&Pnb22n{
+  LISTMONK_ADMIN_PASSWORD: &admin-password ${admin_password} # Set this to a random password for the admin user.
 
 services:
   # listmonk app

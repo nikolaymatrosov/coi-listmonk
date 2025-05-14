@@ -36,6 +36,7 @@ resource "yandex_compute_instance" "instance-based-on-coi" {
     docker-compose = templatefile("./docker-compose.yaml", {
       listmonk_image = local.listmonk_image
       postgres_image = local.postgres_image
+      admin_password = var.admin_password
     })
     user-data = templatefile("./user-data.yaml", {
       SSH_PUBLIC_KEY = file("~/.ssh/id_rsa.pub")

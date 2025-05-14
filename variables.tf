@@ -11,3 +11,7 @@ variable "zone" {
   default = "ru-central1-a"
 }
 
+variable "admin_password" {
+  type        = string
+  description = "Admin password for Listmonk"
+}
